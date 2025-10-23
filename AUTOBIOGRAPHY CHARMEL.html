@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmel Dumanon | Lavender Autobiography ✨</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/enthralling" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #e6d5f7, #f9e8ff);
+            color: #4b3b63;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Sparkly animated background */
+        .sparkles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.6) 1px, transparent 1px);
+            background-size: 50px 50px;
+            animation: sparkleMove 6s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes sparkleMove {
+            from { background-position: 0 0; }
+            to { background-position: 100px 100px; }
+        }
+
+        header {
+            font-family: 'Enthralling', cursive;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 3rem;
+            color: #fff;
+            text-shadow: 
+                0 0 10px #d8b4f8, 
+                0 0 20px #e9d3ff, 
+                0 0 30px white;
+            background: rgba(200, 160, 255, 0.4);
+            backdrop-filter: blur(10px);
+            padding: 20px 40px;
+            border-radius: 40px;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 0 30px rgba(217, 179, 255, 0.5);
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            border-radius: 30px;
+            box-shadow: 0 0 30px rgba(200, 160, 255, 0.5);
+            padding: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow:
+                0 0 10px white,
+                0 0 20px #e8d0ff,
+                0 0 30px #cba9ff;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h2 {
+            color: #6a4da6;
+            margin-top: 15px;
+            text-shadow: 0 0 10px white, 0 0 15px #e6ccff;
+        }
+
+        section {
+            background: rgba(240, 225, 255, 0.7);
+            border-left: 6px solid #b889f8;
+            border-radius: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(190, 150, 255, 0.4);
+            transition: all 0.3s ease-in-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 40px rgba(190, 150, 255, 0.6);
+        }
+
+        h3 {
+            color: #b070ff;
+            text-shadow: 0 0 8px white;
+        }
+
+        p {
+            color: #4b3b63;
+            line-height: 1.8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: rgba(240, 225, 255, 0.7);
+            border-radius: 0;
+            font-size: 0.9rem;
+            box-shadow: 0 -2px 15px rgba(190, 150, 255, 0.5);
+            color: #4b3b63;
+        }
+
+        /* Music box */
+        .music-box {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background:rgba(240, 225, 255, 0.7);
+            border-radius: 25px;
+            padding: 15px;
+            box-shadow:  0 -2px 15px rgba(190, 150, 255, 0.5);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: pulse 2s infinite ease-in-out;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .music-box button {
+            background: #b070ff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow:  0 -2px 15px rgba(190, 150, 255, 0.5);
+            transition: all 0.3s ease;
+            color: white;
+        }
+
+        .music-box button:hover {
+            transform: scale(1.05);
+        }
+
+        .music-reminder {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: #b070ff;
+            text-align: center;
+            text-shadow: 0 0 5px #fff;
+        }
+
+        iframe {
+            display: none;
+        }
+
+        /* Floating glitter hearts */
+        .glitter {
+            position: fixed;
+            width: 8px;
+            height: 8px;
+            background: radial-gradient(circle, #fff 20%, transparent 70%);
+            border-radius: 50%;
+            animation: glitterAnim 5s linear infinite;
+            opacity: 0.8;
+        }
+
+        @keyframes glitterAnim {
+            0% { transform: translateY(0) scale(1); opacity: 0.8; }
+            100% { transform: translateY(-100vh) scale(0.5); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="music-box" id="musicBox">
+        <button id="musicButton">🔇 Unmute Music</button>
+        <div class="music-reminder">🎵 Click here if you want to listen to music and feel relaxed.</div>
+    </div>
+
+    <!-- YouTube background music iframe -->
+    <iframe id="bg-music" width="0" height="0" 
+        src="https://www.youtube.com/embed/HEKN88VyUZI?autoplay=1&mute=1&loop=1&playlist=HEKN88VyUZI" 
+        frameborder="0" allow="autoplay">
+    </iframe>
+
+    <div class="sparkles"></div>
+
+    <header>💜 My Autobiography 💜</header>
+
+    <div class="container">
+        <div class="profile">
+            <img src="https://scontent.fceb6-1.fna.fbcdn.net/v/t1.15752-9/566475389_4206166546307820_2382540793703061455_n.jpg?stp=dst-jpg_p480x480_tt6&_nc_cat=100&ccb=1-7&_nc_sid=0024fc&_nc_eui2=AeE2anmGy33o-iRCINgP2t0zE-RJgYRR8PYT5EmBhFHw9rYBE8s2mb9PMBidwpHCFjXgYoXTiPFBMObG890AhBMf&_nc_ohc=PAldViEo_vYQ7kNvwGaDRjk&_nc_oc=AdnYFXv9XL_Sr41YNzXuO0rLg6IanfqedIIU_SwMRd_lprDsz5nHvQV3cnUhXeq1NU07FYKVzGsgLBzXV8IdluBD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=scontent.fceb6-1.fna&oh=03_Q7cD3gETFcIScJNLBAtjNlpePVWVG4oGBrz2gMKaadbK43zwwQ&oe=691EAA79" alt="Charmel Dumanon">
+            <h2>Charmel Dumanon</h2>
+        </div>
+
+        <section>
+            <h3>About Me</h3>
+            <p>Hello! My name is <strong>Charmel Dumanon</strong>. I was born on <strong>May 28, 2007</strong> in <strong>Cebu City, Philippines</strong>. I’m taking up <strong>Bachelor of Industrial Technology</strong> major in <strong>Information Technology</strong>. I love learning new things about computers and technology. 💻💜</p>
+        </section>
+
+        <section>
+            <h3>Hobbies & Interests</h3>
+            <p>I enjoy music, singing, drawing, and watching movies. 🎵🎬 During my free time, I love spending moments with friends and family — they make me feel inspired and happy! 💕</p>
+        </section>
+
+        <section>
+            <h3>Early Life</h3>
+            <p>Ever since I was little, I’ve been curious about how gadgets and computers work. I loved watching technology evolve — it motivated me to dream of creating something amazing someday! ✨</p>
+        </section>
+
+        <section>
+            <h3>Education</h3>
+            <p>I studied at <strong>Babag Elementary School</strong>, then <strong>Babag National High School / Jacob Institute of Science and Technology</strong>. Now, I’m continuing my journey at <strong>Lapu-Lapu City College</strong> as an IT student, learning new things every day! 💻📘</p>
+        </section>
+
+        <section>
+            <h3>Goals in Life</h3>
+            <p>My dream is to become a successful IT professional who creates apps and systems that can help people and make life easier. 💫</p>
+        </section>
+
+        <section>
+            <h3>Motto in Life</h3>
+            <p><em>“All things are possible for one who believes.” 💜🌙</em></p>
+        </section>
+    </div>
+
+    <footer>© 2025 | Charmel Dumanon ✨</footer>
+
+    <script>
+        // Create floating glitters dynamically 💖
+        function createGlitter() {
+            const glitter = document.createElement('div');
+            glitter.classList.add('glitter');
+            glitter.style.left = Math.random() * 100 + 'vw';
+            glitter.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.body.appendChild(glitter);
+            setTimeout(() => glitter.remove(), 5000);
+        }
+        setInterval(createGlitter, 150);
+
+        // Music toggle functionality 🎵
+        const musicButton = document.getElementById("musicButton");
+        const bgMusic = document.getElementById("bg-music");
+
+        let isMuted = true; // start muted
+
+        musicButton.addEventListener("click", () => {
+            isMuted = !isMuted;
+            const newSrc = `https://www.youtube.com/embed/HEKN88VyUZI?autoplay=1&mute=${isMuted ? 1 : 0}&loop=1&playlist=HEKN88VyUZI`;
+            bgMusic.src = newSrc;
+            musicButton.textContent = isMuted ? "🔇 Unmute Music" : "🔊 Mute Music";
+        });
+    </script>
+
+</body>
+</html>
+
